@@ -18,11 +18,14 @@ class ViewController: UIViewController, AKPickerViewDataSource, AKPickerViewDele
 		super.viewDidLoad()
 		self.pickerView.delegate = self
 		self.pickerView.dataSource = self
-
-		self.pickerView.font = UIFont(name: "HelveticaNeue-Light", size: 20)!
-		self.pickerView.highlightedFont = UIFont(name: "HelveticaNeue", size: 20)!
+  
+		self.pickerView.font = UIFont.systemFont(ofSize: 15)
+		self.pickerView.highlightedFont = UIFont.boldSystemFont(ofSize: 17)
+        self.pickerView.textColor = UIColor(red: 186/255, green: 207/255, blue: 223/255, alpha: 1)
+        self.pickerView.highlightedTextColor = UIColor(red: 255/255, green: 80/255, blue: 48/255, alpha: 1)
 		self.pickerView.pickerViewStyle = .wheel
 		self.pickerView.maskDisabled = false
+        self.pickerView.selectItem(5)
 		self.pickerView.reloadData()
 	}
 
